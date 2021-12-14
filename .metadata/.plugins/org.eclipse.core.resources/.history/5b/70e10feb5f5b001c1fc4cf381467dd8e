@@ -1,0 +1,68 @@
+package com.flipkart.stepdefinition;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TVpurchase {
+	 static WebDriver driver;
+		@Given("User launch the application")
+		public void user_launch_the_application() {
+		    WebDriverManager.chromedriver().setup();
+		     driver = new ChromeDriver();
+		    driver.get("https://www.flipkart.com/");
+		    driver.manage().window().maximize();
+		    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		}
+		
+		@Given("User login by using credentials")
+	public void user_login_by_using_credentials() {
+		try {
+			  WebElement button = driver.findElement(By.xpath("//button[text()='✕']"));
+			  button.isDisplayed();
+			  button.click();
+				}catch(Exception e) {
+					System.out.println("Button is not displayed");
+				   }
+			}
+	
+
+	@When("search TV name")
+	public void search_TV_name() {
+	    driver.findElement(By.xpath("//input[@type='text']")).sendKeys("sony tv",Keys.ENTER);
+	}
+
+	@When("click on TV name which is user want")
+	public void click_on_TV_name_which_is_user_want() {
+	   driver.findElement(By.xpath("//div[text()='SONY BRAVIA 80 cm (32 inch) HD Ready LED Smart TV']")).click();
+	}
+
+	@Then("click add to cart")
+	public void click_add_to_cart() {
+	   String par = driver.getWindowHandle();
+	   Set<String> child = driver.getWindowHandles();
+	   for (String x : child) {
+		 if(!par.equals(child)) {
+			 driver.switchTo().window(par);
+		 }}
+	
+	WebElement cart = driver.findElement(By.xpath("//button[text()='GO TO CART']"));
+JavascriptExecutor je = (JavascriptExecutor)driver;
+je.executeScript("arguments[0].ScrollIntoView(true)",cart);
+cart.click();
+	}
+
+
+
+}

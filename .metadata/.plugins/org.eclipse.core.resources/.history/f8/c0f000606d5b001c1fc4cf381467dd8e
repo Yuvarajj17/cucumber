@@ -1,0 +1,18 @@
+#Author: yuva.email@your.domain.com
+#Feature: TVPurchase
+#Scenario: TVPurchase
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+@tag
+Feature: TVpurchase
+
+ @tag1
+  Scenario: TVpurchase
+    Given User launch the app
+    And User login by using credentials
+    When search TV name
+    And click on TV name which is user want
+    Then click add to cart
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="CucumberDec" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.flipkart.stepdefinition.TestRunner" time="76.006">
+    <testsuite name="Feature: TV Purchase" time="76.006">
+      <testcase name="TV Purchase" classname="TV Purchase" time="48.683"/>
+      <testcase name="TV Purchase using one dim list" classname="TV Purchase" time="27.299"/>
+    </testsuite>
+  </testsuite>
+</testrun>

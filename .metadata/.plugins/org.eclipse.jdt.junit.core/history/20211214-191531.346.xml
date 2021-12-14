@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="CucumberDec" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.flipkart.stepdefinition.TestRunner" time="0.022">
+    <testsuite name="Feature: TV Purchase" time="0.022">
+      <testcase name="TV Purchase" classname="TV Purchase" time="0.011">
+        <skipped>cucumber.runtime.junit.SkippedThrowable: This scenario is skipped&#13;
+&#13;
+</skipped>
+      </testcase>
+      <testcase name="TV Purchase using one dim list" classname="TV Purchase" time="0.001">
+        <skipped>cucumber.runtime.junit.SkippedThrowable: This scenario is skipped&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

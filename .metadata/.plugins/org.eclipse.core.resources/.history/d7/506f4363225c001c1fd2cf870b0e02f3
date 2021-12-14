@@ -1,0 +1,18 @@
+#Author: yuvaraj.email@your.domain.com
+#Feature: TV Purchase
+#Scenario: TV Purchase
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+@tag
+Feature: TV Purchase
+  
+
+  @tag1
+  Scenario: TV Purchase
+    Given User launch the app
+    And User login by using credentials
+    When user search the Tv 
+    And user click on the Tv name
+    Then user click on add tocart

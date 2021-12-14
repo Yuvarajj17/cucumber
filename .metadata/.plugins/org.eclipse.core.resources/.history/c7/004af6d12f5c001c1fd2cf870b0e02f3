@@ -1,0 +1,55 @@
+#Author: yuvaraj.email@your.domain.com
+#Feature: TV Purchase
+#Scenario: TV Purchase
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+@tag
+Feature: TV Purchase
+  
+
+  @tag1
+  Scenario: TV Purchase
+    Given User launch the app
+    And User login by using credentials
+    When user search the Tv 
+    And user click on the Tv name
+    Then user click on add tocart
+
+@tag2
+  Scenario: TV Purchase using one dim list
+   Given User launch the app
+    And User login by using credentials
+    When user search the TV in one dim list 
+    |SONY BRAVIA 80 cm (32 inch) HD Ready LED Smart TV  (KDL-32W6103)|SAMSUNG 80 cm (32 inch) HD Ready LED Smart TV  (UA32T4340AKXXL / UA32T4340BKXXL)
+    |Mi 5X 138.8 cm (55 inch) Ultra HD (4K) LED Smart Android TV with Dolby Atmos and Dolby Vision|
+     And user click on the Tv name
+    Then user click on add tocart
+ 
+  @tag3
+  Scenario: TV Purchase using one dim map
+   Given User launch the app
+    And User login by using credentials
+    When user search the TV in one dim map
+    |1|SONY BRAVIA 80 cm (32 inch) HD Ready LED Smart TV  (KDL-32W6103)|
+    |2|SAMSUNG 80 cm (32 inch) HD Ready LED Smart TV  (UA32T4340AKXXL / UA32T4340BKXXL)|
+    |3|Mi 5X 138.8 cm (55 inch) Ultra HD (4K) LED Smart Android TV with Dolby Atmos and Dolby Vision|
+    And user click on the Tv name
+    Then user click on add tocart
+    
+      @tag4
+  Scenario Outline: TV Purchase using outline
+   Given User launch the app
+    And User login by using credentials
+    When user search the Tv "<TV Purchase>"
+     And user click on the Tv name
+    Then user click on add tocart
+    
+    Examples:
+    |TV Purchase|
+    |SONY BRAVIA 80 cm (32 inch) HD Ready LED Smart TV  (KDL-32W6103)|
+    |SAMSUNG 80 cm (32 inch) HD Ready LED Smart TV  (UA32T4340AKXXL / UA32T4340BKXXL)|
+    |Mi 5X 138.8 cm (55 inch) Ultra HD (4K) LED Smart Android TV with Dolby Atmos and Dolby Vision|
+ 
+  

@@ -1,0 +1,10 @@
+#Author: yuvaraj.email@your.domain.com
+#Scenario: TVpurchase
+ @tag1
+  Scenario:TVpurchase
+    Given User launch the application
+    And User login by using credentials
+    When search TV name
+    And click on TV name which is user want
+    Then click add to cart
+

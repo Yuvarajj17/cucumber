@@ -1,0 +1,18 @@
+#Author: yuvaraj.email@your.domain.com
+#Feature: MobilePurchase
+#Scenario: MobilePurchase
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+@tag
+Feature: MobilePurchase
+  
+
+  @tag1
+  Scenario: MobilePurchase
+    Given User launch the application
+    And User log in by using credentials
+    When search mobile name
+    And click mobile name which user want
+    Then click on add to cart
